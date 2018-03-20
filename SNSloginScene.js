@@ -1,0 +1,95 @@
+import React, { Component } from 'react';
+import { 
+  Text,
+  View,
+  StyleSheet
+       } from 'react-native';
+//import { Actions } from 'react-native-router-flux';
+import { Switch } from 'react-native-switch';
+
+export default class SNSloginScene extends Component {
+        render() {
+        return (
+<View>
+            <View style={{ width: 410, height: 20 }} >
+                   
+                   </View>
+
+
+            <View style={{width: 412, height: 80, borderWidth: 1, flexDirection: 'row', backgroundColor: '#F5DEB3',}} >
+                   <View style={{width: 305, height: 80,  /*alignItems: 'center' ,*/justifyContent: 'center'}} >
+                   <Text style={styles.SettingText}>
+            페이스북 연동
+                </Text>
+                   </View>
+                   
+                   <View style={{width: 102, height: 80,  alignItems: 'center',justifyContent: 'center'}} >
+            <Switch
+            value={true}
+            onValueChange={(val) => console.log(val)}
+            disabled={false}
+            activeText={'On'}
+            inActiveText={'Off'}
+            circleSize={40}
+            barHeight={40}
+            circleBorderWidth={3}
+            backgroundActive={'green'}
+            backgroundInactive={'gray'}
+            circleActiveColor={'#30a566'}
+            circleInActiveColor={'#000000'}
+            /> 
+                   </View>
+                </View>
+
+<View style={{ width: 410, height: 7 }} >
+                   
+                   </View>
+
+                
+            <View style={{width: 412, height: 80, borderWidth: 1, flexDirection: 'row', backgroundColor: '#F5DEB3',}} >
+                   <View style={{width: 305, height: 80,  /*alignItems: 'center' ,*/justifyContent: 'center'}} >
+                   <Text style={styles.SettingText}>
+            트위터 연동
+                </Text>
+                   </View>
+                   
+                   <View style={{width: 102, height: 80,  alignItems: 'center',justifyContent: 'center'}} >
+            <Switch
+            value={true}
+            onValueChange={(val) => console.log(val)}
+            disabled={false}
+            activeText={'On'}
+            inActiveText={'Off'}
+            circleSize={40}
+            barHeight={40}
+            circleBorderWidth={3}
+            backgroundActive={'green'}
+            backgroundInactive={'gray'}
+            circleActiveColor={'#30a566'}
+            circleInActiveColor={'#000000'}
+            /> 
+                   </View>
+                </View>
+ </View>
+        );
+      }
+    }
+    const styles = StyleSheet.create({
+        SettingText: {
+          fontSize: 25,
+          color: 'white',
+          margin: 20
+        },
+        /*navBar: {
+          height: 73.8,
+          backgroundColor: 'orange',
+          justifyContent: 'center',
+            alignItems: 'center',
+          flexDirection: 'row',
+          borderWidth: 1
+        },
+        navBarText: {
+          fontSize: 22,
+          color: 'white',
+        }*/
+      });
